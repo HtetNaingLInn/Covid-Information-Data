@@ -38,7 +38,7 @@
                     <input type="text" class="form-control" name="address">
                   </div>
                   <div class="form-group">
-                    <label for="description">Last Tours</label>
+                    <label for="description">Last Route</label>
                     <textarea class="form-control" rows="3" name="description"></textarea>
                   </div>
                   <div class="form-group">
@@ -49,6 +49,18 @@
                       <option>Voluenter</option>
                     </select>
                   </div>
+
+                  <div class="form-group">
+                    <label for="healthcenter">Select Division</label>
+                    <select multiple class="form-control" name="division_id">
+                      @foreach ($divs as $div)
+                          
+                      
+                    <option value="{{$div->id}}">{{$div->name}}</option>
+                      @endforeach
+                    </select>
+                  </div>
+
                   <div class="form-group">
                     <label for="healthcenter">Select Health Center</label>
                     <select multiple class="form-control" name="health_center_id">

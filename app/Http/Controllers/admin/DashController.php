@@ -14,7 +14,7 @@ class DashController extends Controller
     public function index(){
 
         if(request('search')){
-                $divs=Division::where('name','like','%'.request('search').'%')->orderby('id','desc');
+                $divs=Division::where('name','like','%'.request('search').'%')->orderby('id','desc')->paginate('6');
         }else{
             $divs=Division::orderby('id','desc')->paginate('6');
         }

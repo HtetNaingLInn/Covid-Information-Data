@@ -64,13 +64,33 @@
                     <h3 class="text-bold text-info">{{$div->name}}</h3>
                 </div>
                 <div class="card-body">
-               @foreach ($div->city as $div->cities)
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h2 class="text-info text-center">Sicker</h2>
+                        <h5 class="text-info text-center">{{count( $div->member->where('role','Sicker')) }}</h5>
+                        </div>
+                        <div class="col-md-4">
+                            <h2 class="text-danger text-center">Positive</h2>
+                                  <h5 class="text-danger text-center">{{count( $div->member->where('role','Positive')) }}</h5>
+                        </div>
+                        <div class="col-md-4">
+                            <h2 class="text-success text-center">Voluent</h2>
+                                  <h5 class="text-success text-center">{{count( $div->member->where('role','Voluenter')) }}</h5>
+                        </div>
+                        
+                    </div>
+                    <hr>
+
+               {{-- @foreach ($div->member as $div->members)
                    <ul>
-                   @foreach ( $div->cities->member as $div->cities->members)
-                      <li> {{ $div->cities->members->name}}</li>
-                   @endforeach
+                  
+                      <li> {{ $div->members->name}}</li>
+                        <p>{{$div->members->role}}</p>
+                       
+                  
                 </ul>
-               @endforeach
+               @endforeach --}}
                     
                     
                 </div>

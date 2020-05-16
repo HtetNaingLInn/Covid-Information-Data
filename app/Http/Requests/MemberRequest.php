@@ -30,6 +30,7 @@ class MemberRequest extends FormRequest
             'address'=>'required',
             'description'=>'required',
             'role'=>'required',
+            'division_id'=>'required',
             'health_center_id'=>'required'
         ];
     }

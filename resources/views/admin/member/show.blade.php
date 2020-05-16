@@ -18,7 +18,8 @@
             <li> NRC       &nbsp;&nbsp;&nbsp;: {{$member->nrc}}</li>
             <li> Phone     &nbsp;&nbsp;&nbsp;: {{$member->phone}}</li>
             <li> Address   &nbsp;&nbsp;&nbsp;: {{$member->address}}</li>
-            <li> Last Tour &nbsp;&nbsp;&nbsp;: {{$member->description}}</li>
+            <li> Last Route &nbsp;&nbsp;&nbsp;: {{$member->description}}</li>
+            <li> Division  &nbsp;&nbsp;&nbsp;: {{$member->division->name}}</li>
             <li> Role      &nbsp;&nbsp;&nbsp;: {{$member->role}}</li>
             <li> Starting Date      &nbsp;&nbsp;&nbsp;: {{$member->created_at->diffForHumans()}}</li>
             </ul>

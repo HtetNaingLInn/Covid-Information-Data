@@ -14,4 +14,9 @@ class Division extends Model
     {
         return $this->hasMany('App\City', 'division_id','id');
     }
+
+    public function member()
+    {
+        return $this->hasMany('App\Member', 'division_id', 'id');
+    }
 }

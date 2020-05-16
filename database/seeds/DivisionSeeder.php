@@ -13,10 +13,27 @@ class DivisionSeeder extends Seeder
     public function run()
     {
         $faker = Faker\Factory::create();
-        for($i=0;$i<14;$i++){
+        $names=[
+            
+            ['name'=>'Mandalay'],
+            ['name'=>'Thaninthayi'],
+            ['name'=>'Mon'],
+            ['name'=> 'Ayeyarwaddy'],
+            ['name'=>'Kayin'],
+            ['name'=>'Bago'],
+            ['name'=>'Rakhine'],
+            ['name'=> 'Magwe'],
+            ['name'=>'Kayah'],
+            ['name'=> 'Shan'],
+            ['name'=>'Sagaing'],
+            ['name'=>'Chin'],
+            ['name'=>'Kachin'],
+             ];
+        foreach($names as $name )
             Division::create([
-                'name'=>$faker->text('10')
+                'name'=>$name['name']
             ]);
-        }
+            
+        
     }
 }

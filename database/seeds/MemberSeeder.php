@@ -22,6 +22,7 @@ class MemberSeeder extends Seeder
             'address'=>$faker->text('20'),
             'description'=>$faker->text('25'),
             'role'=>$role,
+            'division_id'=>rand(1,14),
             'health_center_id'=>rand(1,20)
         ]);
         }

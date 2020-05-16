@@ -38,7 +38,7 @@
                     <input type="text" class="form-control" name="address" value="{{$member->address}}">
                   </div>
                   <div class="form-group">
-                    <label for="description">Last Tours</label>
+                    <label for="description">Last Route</label>
                   <textarea class="form-control" rows="3" name="description" aria-valuemax="{{$member->description}}"></textarea>
                   </div>
                   <div class="form-group">

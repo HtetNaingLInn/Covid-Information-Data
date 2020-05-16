@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\admin;
 
 use App\Member;
+use App\Division;
 use App\Health_Center;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -25,8 +26,9 @@ class MemberController extends Controller
     
     public function create()
     {
+        $divs=Division::all();
         $healthes=Health_Center::all();
-        return view('admin.member.create',compact('healthes'));
+        return view('admin.member.create',compact('healthes','divs'));
     }
 
    
@@ -39,6 +41,7 @@ class MemberController extends Controller
             'address'=>$request->address,
             'description'=>$request->description,
             'role'=>$request->role,
+            'division_id'=>$request->division_id,
             'health_center_id'=>$request->health_center_id
         ]);
         return redirect('admin/member/create')->with('status','Created Successfully');
@@ -69,6 +72,7 @@ class MemberController extends Controller
             'address'=>$request->address,
             'description'=>$request->description,
             'role'=>$request->role,
+            'division_id'=>$request->division_id,
             'health_center_id'=>$request->health_center_id
         ]);
         return redirect('admin/member')->with('status','Created Successfully');
