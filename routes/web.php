@@ -1,5 +1,6 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -61,5 +62,28 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'auth'], fu
     Route::get('dashboard/health/{id}','DashController@health');
     Route::get('dashboard/member/{id}','DashController@member');
 
+
+    Route::get('ngo','NgoController@index');
+    Route::get('ngo/create','NgoController@create');
+    Route::post('ngo/create','NgoController@store');
+    Route::get('ngo/show/{id}','NgoController@show');
+    Route::get('ngo/edit/{id}','NgoController@edit');
+    Route::post('ngo/edit/{id}','NgoController@update');
+    Route::get('ngo/destroy/{id}','NgoController@destroy');
+
+
+    Route::get('employee','EmployeeController@index');
+    Route::get('employee/create/{id}','EmployeeController@create');
+    Route::post('employee/create/{id}','EmployeeController@store');
+    Route::get('employee/show/{id}','EmployeeController@show');
+    Route::get('employee/edit/{id}','EmployeeController@edit');
+    Route::post('employee/edit/{id}','EmployeeController@update');
+    Route::get('employee/destroy/{id}','EmployeeController@destroy');
+
+    
+
+    
+
+ 
 
 });

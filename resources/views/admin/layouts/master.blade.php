@@ -100,6 +100,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       <p>Member</p>
                     </a>
                   </li>
+                  <li class="nav-item">
+                    <a href="{{url('admin/ngo')}}" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>NGO</p>
+                      </a>
+                    </li>
             </ul>
           </li>
           <li class="nav-item">
