@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Donate extends Model
 {
     protected $fillable=[
-        'title','description','ngo_id','hospital_id'
+        'title','description', 'price','ngo_id','hospital_id'
     ];
 
     public function ngo()

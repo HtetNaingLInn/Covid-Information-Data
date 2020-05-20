@@ -53,7 +53,7 @@
                 <h2 class="card-title text-primary text-bold">{{$ngo->name}} Employee List</h2>
             </div>
             <div class="col-md-4">
-                <a href="{{url('admin/ngo')}}" ><button type="submit" class="btn btn-info float-right">
+            <a href="{{action('admin\NgoController@donateshow',$ngo->id)}}" ><button type="submit" class="btn btn-info float-right">
                     <i class="fas fa-donate"></i> &nbsp; Donation List
             </button></a>
             </div>

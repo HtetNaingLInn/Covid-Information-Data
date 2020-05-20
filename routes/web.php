@@ -62,6 +62,8 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'auth'], fu
     Route::get('dashboard/health/{id}','DashController@health');
     Route::get('dashboard/member/{id}','DashController@member');
 
+Route::group(['middleware' => ['can:isAdmin']], function () {
+    
 
     Route::get('ngo','NgoController@index');
     Route::get('ngo/create','NgoController@create');
@@ -93,7 +95,9 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'auth'], fu
     Route::get('donate','DonateController@index');
     Route::get('donate/create','DonateController@create');
     Route::post('donate/create','DonateController@store');
+
+    Route::get('ngo/donate/{id}','NgoController@donateshow');
    
-    
+});
 
 });

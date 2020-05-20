@@ -56,7 +56,9 @@ class HospitalController extends Controller
     
     public function show($id)
     {
-        
+        $hospital=Hospital::findOrfail($id);
+        $donates=$hospital->donate;
+        return view('admin.hospital.show',compact('hospital','donates'));
     }
 
     
@@ -82,6 +84,7 @@ class HospitalController extends Controller
     public function destroy($id)
     {
         Hospital::destroy($id);
+
         return back()->with('status','Deleted Successful');
     }
 }

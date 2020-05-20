@@ -19,6 +19,7 @@ class DonateSeeder extends Seeder
             'title'=>$faker->text('10'),
             'description'=>$faker->text('20'),
             'ngo_id'=>rand(1,5),
+            'price'=>200000,
             'hospital_id'=>rand(1,5)
            ]);
         }

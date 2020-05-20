@@ -78,6 +78,7 @@
                 <td>{{$hospital->id}}</td>
                 <td>{{$hospital->name}}</td>
                <td>{{$hospital->division->name}}</td>
+               <td>{{$hospital->address}}</td>
                <td><a href="{{action('admin\HospitalController@show',$hospital->id)}}" class="btn-sm btn-outline-info"><i class="fas fa-eye"></i></a></td>
                 <td><a href="{{action('admin\HospitalController@edit',$hospital->id)}}" class="btn-sm btn-outline-success"><i class="fas fa-edit"></i></a></td>
                 <td><a href="{{action('admin\HospitalController@destroy',$hospital->id)}}" class="btn-sm btn-outline-danger"><i class="fas fa-trash"></i></a></td>  

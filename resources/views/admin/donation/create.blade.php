@@ -25,6 +25,10 @@
                     <label for="description">Description</label>
                     <input type="text" class="form-control" name="description">
                   </div>
+                  <div class="form-group">
+                    <label for="price">Price</label>
+                    <input type="text" class="form-control" name="price">
+                  </div>
                 <div class="form-group">
                     <label for="division">Select NGO</label>
                     <select multiple class="form-control" name="ngo_id">

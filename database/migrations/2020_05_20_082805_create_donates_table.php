@@ -17,6 +17,7 @@ class CreateDonatesTable extends Migration
             $table->id();
             $table->string('title');
             $table->text('description');
+            $table->string('price');
             $table->integer('ngo_id');
             $table->integer('hospital_id');
             $table->timestamps();

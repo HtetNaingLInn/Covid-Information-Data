@@ -36,6 +36,7 @@ class DonateController extends Controller
     Donate::create([
             'title'=>$request->title,
             'description'=>$request->description,
+            'price'=>$request->price,
             'ngo_id'=>$request->ngo_id,
             'hospital_id'=>$request->hospital_id
     ]);

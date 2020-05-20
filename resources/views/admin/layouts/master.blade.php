@@ -100,6 +100,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       <p>Member</p>
                     </a>
                   </li>
+
+                  @can('isAdmin')
+                    
+                 
                   <li class="nav-item">
                     <a href="{{url('admin/ngo')}}" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
@@ -118,6 +122,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <p>Donation</p>
                           </a>
                         </li>
+                        @endcan
             </ul>
           </li>
           <li class="nav-item">

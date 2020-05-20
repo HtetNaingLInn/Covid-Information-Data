@@ -85,4 +85,11 @@ class NgoController extends Controller
         Ngo::destroy($id);
         return redirect('admin/ngo')->with('status','Deleted Successful');
     }
+
+
+    public function donateshow($id){
+        $ngo=Ngo::findOrfail($id);
+        $donates=$ngo->donate;
+        return view('admin.ngo.show',compact('ngo','donates'));
+    }
 }

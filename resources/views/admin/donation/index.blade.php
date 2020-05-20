@@ -61,6 +61,7 @@
                 <th>NGO Name</th>
                 <th>title</th>
                 <th>description</th>
+                <th>Price</th>
                 <th>Hospital Name</th>
                 
                 
@@ -77,6 +78,7 @@
                <td>{{$donate->ngo->name}}</td>
                <td>{{$donate->title}}</td>
                <td>{{$donate->description}}</td>
+              <td> {{$donate->price}}mmk</td>
                <td>{{$donate->hospital->name}}</td>
                
                   
