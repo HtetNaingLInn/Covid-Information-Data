@@ -106,6 +106,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <p>NGO</p>
                       </a>
                     </li>
+                    <li class="nav-item">
+                      <a href="{{url('admin/hospital/division')}}" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Hospital</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="{{url('admin/donate')}}" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Donation</p>
+                          </a>
+                        </li>
             </ul>
           </li>
           <li class="nav-item">

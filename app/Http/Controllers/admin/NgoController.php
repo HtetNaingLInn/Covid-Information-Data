@@ -18,7 +18,7 @@ class NgoController extends Controller
             $ngos=Ngo::where('name','like','%'.request('search').'%')
             ->orderby('id','desc')->paginate('6');
         }else{
-            $ngos=Ngo::orderby('id','desc')->paginate('6');
+            $ngos=Ngo::paginate('6');
         }
         
         return view('admin.ngo.index',compact('ngos'));
@@ -48,7 +48,7 @@ class NgoController extends Controller
     {
     if(request('search')){
         $ngo=Ngo::findOrfail($id);
-        $employees=$ngo->employee;
+        
         $employees=Employee::where('name','like','%'. request('search').'%')->paginate('6');
     }else{
         $ngo=Ngo::findOrfail($id);

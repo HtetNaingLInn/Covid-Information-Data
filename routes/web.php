@@ -80,10 +80,20 @@ Route::group(['prefix' => 'admin','namespace'=>'admin','middleware'=>'auth'], fu
     Route::post('employee/edit/{id}','EmployeeController@update');
     Route::get('employee/destroy/{id}','EmployeeController@destroy');
 
-    
+    Route::get('hospital/division','HospitalController@division');
+    Route::get('hospital/{id}','HospitalController@index');
+    Route::get('hospital/create/{id}','HospitalController@create');
+    Route::post('hospital/create/{id}','HospitalController@store');
+    Route::get('hospital/show/{id}','HospitalController@show');
+    Route::get('hospital/edit/{id}','HospitalController@edit');
+    Route::post('hospital/edit/{id}','HospitalController@update');
+    Route::get('hospital/destroy/{id}','HospitalController@destroy');
 
     
-
- 
+    Route::get('donate','DonateController@index');
+    Route::get('donate/create','DonateController@create');
+    Route::post('donate/create','DonateController@store');
+   
+    
 
 });

@@ -19,4 +19,10 @@ class Division extends Model
     {
         return $this->hasMany('App\Member', 'division_id', 'id');
     }
+
+
+    public function hospital()
+    {
+        return $this->hasMany('App\Hospital', 'division_id', 'id');
+    }
 }
