@@ -56,6 +56,7 @@
               <tr>
                 <th>No.</th>
                 <th>Date</th>
+                <th>Image</th>
                 <th>NGO Name</th>
                 <th>title</th>
                 <th>description</th>
@@ -73,6 +74,7 @@
                <tr>
                <td>{{$donate->id}}</td>
                <td>{{$donate->created_at->toformattedDateString('d-M-Y')}}</td>
+               <td class="w-25 h-20"><img src="{{asset('/ngo/'.$donate->ngo->image)}}" alt="image" class="img-thumbnail w-50 h-20"></td>
                <td>{{$donate->ngo->name}}</td>
                <td>{{$donate->title}}</td>
                <td>{{$donate->description}}</td>

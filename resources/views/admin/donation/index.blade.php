@@ -12,17 +12,17 @@
     
         
    <div class="row">
-        <div class="col-md-8 mb-3">
+        <div class="col-md-6 mb-3">
 
-
+            
+       <div class="col-md-4">
         <a href="{{url('admin/donate/create')}}" target="_blink" ><button type="submit" class="btn btn-primary">
             <i class="fas fa-donate"></i> &nbsp;  Donate
             </button></a>
-
-
-
+       </div>
+       
         </div>
-        <div class="col-md-4">
+        <div class="col-md-6">
             <div class="col-md-12">
                 <form>
                     <div class="input-group mb-3">
@@ -38,6 +38,28 @@
         </div>
         
     
+    </div>
+    <hr>
+    <div class="col-md-12 mb-2">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <button class="btn btn-primary m-1">List</button>     
+                   <button class="btn btn-primary m-1">Grid</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <form class="form form-group">
+                    <input type="date" name="from">
+                    -
+                    <input type="date" name="to">
+                    
+                    <button class="btn btn-primary btn-sm mb-1" type="submit" id="button-addon2">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -97,7 +119,7 @@
           </table>
         </div>
         <div class="col-md-12 pagination justify-content-center">
-            {{$donates->links()}}
+            {{-- {{$donates->links()}} --}}
         </div>
     
 </div>  

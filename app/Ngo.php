@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Ngo extends Model
 {
     protected $fillable=[
-        'name','phone','supported','address'
+        'name','image','phone','supported','address','register'
     ];
 
     public function employee()

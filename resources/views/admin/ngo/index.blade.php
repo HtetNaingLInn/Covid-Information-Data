@@ -45,6 +45,7 @@
             <thead>
               <tr>
                 <th>No.</th>
+                <th>Image</th>
                 <th>Name</th>
                 <th>Phone</th>
                 <th>Supported</th>
@@ -61,6 +62,7 @@
                <tr>
                
                 <td>{{$ngo->id}}</td>
+                <td class="w-25 h-20"><img src="{{asset('/ngo/'.$ngo->image)}}" class="img-thumbnail w-50 h-20" alt="image"></td>
                 <td>{{$ngo->name}}</td>
                <td>{{$ngo->phone}}</td>
                <td>{{$ngo->supported}}</td>

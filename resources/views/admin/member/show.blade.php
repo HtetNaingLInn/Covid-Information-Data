@@ -14,6 +14,7 @@
            <h3 class="text-bold"> {{$member->name}}</h3>
         </div>
         <div class="card-body">
+            <img src="{{asset('/member/'.$member->image)}}" class="img-thumbnail w-50 h-20" alt="image">
             <ul>
             <li> NRC       &nbsp;&nbsp;&nbsp;: {{$member->nrc}}</li>
             <li> Phone     &nbsp;&nbsp;&nbsp;: {{$member->phone}}</li>

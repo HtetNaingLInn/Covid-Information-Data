@@ -18,7 +18,7 @@
             <h4 class="text-info">Add Member</h4>
         </div>
         <div class="card-body">
-              <form method="post">
+              <form method="post" enctype="multipart/form-data">
                   @csrf
                   @include('message.errors')
                 <div class="form-group">
@@ -70,6 +70,10 @@
                     <option value="{{$health->id}}">{{$health->name}}</option>
                       @endforeach
                     </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="image">Upload Profile</label>
+                    <input type="file" class="form-control-file" name="image">
                   </div>
                 <button type="submit" class="btn btn-info float-right">Add</button>
               </form>

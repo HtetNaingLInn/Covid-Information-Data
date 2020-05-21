@@ -16,9 +16,11 @@ class CreateNgosTable extends Migration
         Schema::create('ngos', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->text('image')->nullable();
             $table->string('phone');
             $table->string('supported');
             $table->text('address');
+            $table->text('register');
             $table->timestamps();
         });
     }

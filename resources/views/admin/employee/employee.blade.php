@@ -50,7 +50,8 @@
         <div class="card-header">
         <div class="row">
             <div class="col-md-8">
-                <h2 class="card-title text-primary text-bold">{{$ngo->name}} Employee List</h2>
+                <h2 class="card-title text-primary text-bold">{{$ngo->name}} Employee List</h2><br>
+            <i>NGO Registion no &nbsp;&nbsp; {{$ngo->register}}</i>
             </div>
             <div class="col-md-4">
             <a href="{{action('admin\NgoController@donateshow',$ngo->id)}}" ><button type="submit" class="btn btn-info float-right">

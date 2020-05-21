@@ -14,13 +14,17 @@ class DonateController extends Controller
    
     public function index()
     {
-        if(request('search')){
-            $donates=Donate::where('title','like','%'.request('search').'%')->paginate('6');
-        }else
+        if(request('from','to'))
         {
-            $donates=Donate::paginate('6');
+            $donates=Donate::whereBetween('created_at',[request('from') , request('to')])->get();
+
+        }
+        else
+        {
+            $donates=Donate::all();
         }
        
+        // return dd($donates);
         return view('admin.donation.index',compact('donates'));
     }
 

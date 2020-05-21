@@ -33,11 +33,18 @@ class NgoController extends Controller
   
     public function store(NgoRequest $request)
     {
+
+        $image=$request->file('image');
+        $imageName=time() .'_' . $image->getClientOriginalName();
+        $image->move(public_path().'/ngo/',$imageName);
+
         Ngo::create([
             'name'=>$request->name,
+            'image'=>$imageName,
             'phone'=>$request->phone,
             'supported'=>$request->supported,
-            'address'=>$request->address
+            'address'=>$request->address,
+            'register'=>$request->register
 
         ]);
         return redirect('admin/ngo/create')->with('status','Created successful');
@@ -70,11 +77,18 @@ class NgoController extends Controller
    
     public function update(NgoRequest $request, $id)
     {
+
+        $image=$request->file('image');
+        $imageName=time() .'_' . $image->getClientOriginalName();
+        $image->move(public_path().'/ngo/',$imageName);
+
         Ngo::FindOrfail($id)->update([
             'name'=>$request->name,
+            'image'=>$imageName,
             'phone'=>$request->phone,
             'supported'=>$request->supported,
-            'address'=>$request->address
+            'address'=>$request->address,
+            'register'=>$request->register
 
         ]);
         return redirect('admin/ngo')->with('status','Edited successful');

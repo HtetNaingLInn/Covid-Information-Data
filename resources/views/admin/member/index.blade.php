@@ -45,6 +45,7 @@
             <thead>
               <tr>
                 <th>No.</th>
+                <th>Image</th>
                 <th>Name</th>
                 <th>Address</th>
                 <th>Role</th>
@@ -61,6 +62,7 @@
                <tr>
                
                 <td>{{$member->id}}</td>
+                <td class="w-25 h-20"><img src="{{asset('/member/'.$member->image)}}" class="img-thumbnail w-50 h-20" alt="image"></td>
                 <td>{{$member->name}}</td>
                <td>{{$member->address}}</td>
                <td>{{$member->role}}</td>

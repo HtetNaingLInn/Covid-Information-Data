@@ -34,6 +34,11 @@ class MemberController extends Controller
    
     public function store(MemberRequest $request)
     {
+
+        $image=$request->file('image');
+        $imageName=time() .'_' . $image->getClientOriginalName();
+        $image->move(public_path().'/member/',$imageName);
+
         Member::create([
             'name'=>$request->name,
             'nrc'=>$request->nrc,
@@ -41,6 +46,7 @@ class MemberController extends Controller
             'address'=>$request->address,
             'description'=>$request->description,
             'role'=>$request->role,
+            'image'=>$imageName,
             'division_id'=>$request->division_id,
             'health_center_id'=>$request->health_center_id
         ]);
@@ -65,6 +71,11 @@ class MemberController extends Controller
    
     public function update(MemberRequest $request, $id)
     {
+        $image=$request->file('image');
+        $imageName=time() .'_' . $image->getClientOriginalName();
+        $image->move(public_path().'/member/',$imageName);
+
+
         Member::FindOrfail($id)->update([
             'name'=>$request->name,
             'nrc'=>$request->nrc,
@@ -72,6 +83,7 @@ class MemberController extends Controller
             'address'=>$request->address,
             'description'=>$request->description,
             'role'=>$request->role,
+            'image'=>$imageName,
             'division_id'=>$request->division_id,
             'health_center_id'=>$request->health_center_id
         ]);

@@ -21,6 +21,7 @@ class CreateMembersTable extends Migration
             $table->text('address');
             $table->text('description');
             $table->string('role');
+            $table->text('image')->nullable();
             $table->integer('division_id');
             $table->integer('health_center_id');
             $table->timestamps();

@@ -25,9 +25,11 @@ class NgoRequest extends FormRequest
     {
         return [
             'name'=>'required',
+            'image'=>'required',
             'phone'=>'required',
             'supported'=>'required',
-            'address'=>'required'
+            'address'=>'required',
+            'register'=>'required'
         ];
     }
 }

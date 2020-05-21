@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Member extends Model
 {
     protected $fillable=[
-        'name','nrc','phone','address','description','role','division_id','health_center_id'
+        'name','nrc','phone','address','description','role','image','division_id','health_center_id'
             ];
 
             public function health_center()

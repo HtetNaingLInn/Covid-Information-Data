@@ -25,9 +25,11 @@ class NgoSeeder extends Seeder
         foreach($ngos as $ngo )
             Ngo::create([
                 'name'=>$ngo['name'],
+                'image'=>$faker->text('10'),
                 'phone'=>$ngo['phone'],
                 'supported'=>$faker->text('5'),
-                'address'=>$faker->text('20')
+                'address'=>$faker->text('20'),
+                'register'=>$faker->text('10')
             ]);
             
     }
