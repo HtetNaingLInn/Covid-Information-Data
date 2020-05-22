@@ -23,18 +23,7 @@
        
         </div>
         <div class="col-md-6">
-            <div class="col-md-12">
-                <form>
-                    <div class="input-group mb-3">
-                        <input type="text" name="search" class="form-control" placeholder="Search By Name">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary" type="submit" id="button-addon2">
-                                <i class="fas fa-search"></i>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
+           
         </div>
         
     
@@ -49,7 +38,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <form class="form form-group">
+                <form class="">
                     <input type="date" name="from">
                     -
                     <input type="date" name="to">
@@ -57,7 +46,7 @@
                     <button class="btn btn-primary btn-sm mb-1" type="submit" id="button-addon2">
                         <i class="fas fa-search"></i>
                     </button>
-                </form>
+                </form> 
             </div>
         </div>
     </div>

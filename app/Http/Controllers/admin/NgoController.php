@@ -99,11 +99,22 @@ class NgoController extends Controller
         Ngo::destroy($id);
         return redirect('admin/ngo')->with('status','Deleted Successful');
     }
-
+ 
 
     public function donateshow($id){
+
+        // if(request('from','to')){
+        //     $ngo=Ngo::findOrfail($id);
+        // $donates=$ngo->donate::whereBetween($ngo->donate->created_at,[request('from') , request('to')])->get();
+
+        // }else{
+        //     $ngo=Ngo::findOrfail($id);
+        //     $donates=$ngo->donate;
+        // }
+
         $ngo=Ngo::findOrfail($id);
-        $donates=$ngo->donate;
+           $donates=$ngo->donate;
+
         return view('admin.ngo.show',compact('ngo','donates'));
     }
 }

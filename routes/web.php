@@ -93,6 +93,8 @@ Route::group(['middleware' => ['can:isAdmin']], function () {
 
     
     Route::get('donate','DonateController@index');
+   
+    
     Route::get('donate/create','DonateController@create');
     Route::post('donate/create','DonateController@store');
 

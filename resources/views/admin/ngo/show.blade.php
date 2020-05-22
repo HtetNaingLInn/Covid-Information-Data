@@ -37,6 +37,28 @@
         
     
     </div>
+    <hr>
+    <div class="col-md-12 mb-2">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <a href="#"><button class="btn btn-primary m-1">List</button></a>
+                  <a href="#"> <button class="btn btn-primary m-1">Grid</button></a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <form class="form form-group">
+                    <input type="date" name="from">
+                    -
+                    <input type="date" name="to">
+                    
+                    <button class="btn btn-primary btn-sm mb-1" type="submit" id="button-addon2">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form> 
+            </div>
+        </div>
+    </div>
 </div>
 
 
