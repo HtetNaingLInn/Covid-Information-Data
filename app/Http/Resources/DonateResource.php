@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class NgoResource extends JsonResource
+class DonateResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -16,11 +16,10 @@ class NgoResource extends JsonResource
     {
         return [
             'id'=>$this->id,
-            'phone'=>$this->phone,
-            'image'=>asset('/ngo/'.$this->image),
-            'date'=>$this->created_at,
-            'employee'=>$this->employee
-
+            'title'=>$this->title,
+            'ngo'=>$this->ngo->name,
+            'price'=>$this->price,
+            'hospital'=>$this->hospital->name
         ];
     }
 }

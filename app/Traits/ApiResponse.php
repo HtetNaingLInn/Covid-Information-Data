@@ -17,4 +17,9 @@ trait ApiResponse
             'message'=>'the ngo not found'
         ],$code);
     }
+    public function CreateResponse($code=201){
+        return response()->json([
+            'message'=>'Created Successful'
+        ],$code);
+    }
 }
