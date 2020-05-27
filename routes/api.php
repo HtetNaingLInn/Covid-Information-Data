@@ -21,3 +21,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::resource('ngo', 'admin\api\NgoController')->only('index','show');
 
 Route::resource('donate', 'admin\api\DonateController')->except('create','edit');
+
+Route::resource('member', 'admin\api\MemberController');
+Route::get('sicker','admin\api\MemberController@sicker')->name('sicker');
