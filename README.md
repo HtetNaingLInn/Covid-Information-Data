@@ -64,3 +64,9 @@ Eloquent Database
 -you can added Ngo List and Donation List,
 -how much hospital got Donation list,etc....
 ```
+
+## Restapi contain 
+```
+-all routes can get api 
+
+```
