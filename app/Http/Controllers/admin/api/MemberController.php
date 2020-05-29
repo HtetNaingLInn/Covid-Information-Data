@@ -59,7 +59,7 @@ class MemberController extends ApiController
 
     public function sicker(){
         $member=Member::all();
-        $pp=$member->where('role','Sicker');
+       $pp=$member->where('role','Sicker');
         return $this->successResponse(MemberResource::collection($pp));
     }
 }
